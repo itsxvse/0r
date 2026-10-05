@@ -588,3 +588,44 @@ body::after {
             transparent 30%
         );
 }
+.terminal {
+    margin-top: 50px;
+    max-width: 650px;
+    background: #080808;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(255, 23, 68, .12);
+}
+
+.terminal-header {
+    padding: 12px 15px;
+    border-bottom: 1px solid #222;
+}
+
+.terminal-header span {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #444;
+    margin-right: 6px;
+}
+
+.terminal-body {
+    padding: 22px;
+    font-family: monospace;
+    line-height: 2;
+}
+
+.command {
+    color: #ff1744;
+}
+
+.success {
+    color: #00ff88;
+}
+
+.text {
+    color: #777;
+}
