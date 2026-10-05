@@ -866,3 +866,142 @@ body::after {
     }
 
 }
+/* ==============================
+   INTERACTIVE TERMINAL
+============================== */
+
+.interactive-terminal {
+    width: min(850px, 100%);
+    margin: 50px auto 0;
+
+    background: rgba(5, 5, 8, .92);
+
+    border: 1px solid #252530;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 60px rgba(255, 23, 68, .08),
+        inset 0 0 30px rgba(36, 107, 255, .03);
+
+    transition: .3s;
+}
+
+.interactive-terminal:hover {
+    border-color: #ff1744;
+
+    box-shadow:
+        0 0 70px rgba(255, 23, 68, .12);
+}
+
+.terminal-top {
+    display: flex;
+    align-items: center;
+
+    padding: 14px 18px;
+
+    border-bottom: 1px solid #222;
+
+    background: rgba(255,255,255,.02);
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 7px;
+}
+
+.terminal-dots span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #444;
+}
+
+.terminal-title {
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #555;
+
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.terminal-screen {
+    padding: 25px;
+
+    min-height: 300px;
+
+    font-family: monospace;
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.terminal-user {
+    color: #ff1744;
+}
+
+.terminal-symbol {
+    color: #246bff;
+}
+
+.terminal-output {
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.terminal-success {
+    color: #00ff88;
+    margin-bottom: 15px;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#terminalInput {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: monospace;
+    font-size: 14px;
+}
+
+#terminalInput::placeholder {
+    color: #333;
+}
+
+#terminalOutput {
+    margin-top: 8px;
+    color: #888;
+}
+
+@media (max-width: 700px) {
+
+    .interactive-terminal {
+        margin-top: 35px;
+    }
+
+    .terminal-screen {
+        padding: 18px;
+
+        font-size: 12px;
+    }
+
+    #terminalInput {
+        font-size: 12px;
+    }
+
+}
