@@ -424,3 +424,130 @@ body::after {
         left .15s ease,
         top .15s ease;
 }
+/* ==============================
+   CYBER GRID
+============================== */
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: -2;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+
+    pointer-events: none;
+}
+
+
+/* ==============================
+   GLITCH EFFECT
+============================== */
+
+.hero h1 {
+    position: relative;
+}
+
+.hero h1:hover {
+    animation: glitch .25s linear;
+}
+
+@keyframes glitch {
+
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-3px, 2px);
+    }
+
+    50% {
+        transform: translate(3px, -2px);
+    }
+
+    75% {
+        transform: translate(-2px, -1px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+/* ==============================
+   TERMINAL
+============================== */
+
+.terminal {
+    margin-top: 60px;
+
+    width: min(650px, 100%);
+
+    background: #080808;
+
+    border: 1px solid #24242b;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 50px rgba(255, 23, 68, .08);
+}
+
+.terminal-header {
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #222;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.terminal-header span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #333;
+}
+
+.terminal-body {
+    padding: 22px;
+
+    font-family: monospace;
+
+    line-height: 2;
+}
+
+.terminal-body .command {
+    color: #ff1744;
+}
+
+.terminal-body .success {
+    color: #00ff88;
+}
+
+.terminal-body .text {
+    color: #777;
+}
