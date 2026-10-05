@@ -226,3 +226,51 @@
     <script src="script.js"></script>
 </body>
 </html>
+/* =========================
+   JAVASCRIPT ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links a.active {
+    color: #ff1744;
+}
+
+:root {
+    --mouse-x: 50vw;
+    --mouse-y: 50vh;
+}
+
+body {
+    position: relative;
+}
+
+body::after {
+    background:
+        radial-gradient(
+            450px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255,23,68,0.08),
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255,23,68,0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(36,107,255,0.10),
+            transparent 32%
+        );
+}
