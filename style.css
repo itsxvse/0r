@@ -368,3 +368,59 @@ footer {
         text-align: center;
     }
 }
+/* ==============================
+   SCROLL ANIMATION
+============================== */
+
+.section,
+.card,
+.project {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.section.show,
+.card.show,
+.project.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   MOUSE GLOW
+============================== */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    left: var(--mouse-x, -200px);
+    top: var(--mouse-y, -200px);
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 23, 68, .08),
+        transparent 65%
+    );
+
+    pointer-events: none;
+
+    z-index: 999;
+
+    transition:
+        left .15s ease,
+        top .15s ease;
+}
